@@ -3,7 +3,7 @@ import {FlexLayout} from "SpectaclesUIKit.lspkg/Scripts/Components/Layout2D/Flex
 import {FlexItem} from "SpectaclesUIKit.lspkg/Scripts/Components/Layout2D/Flex/FlexItem"
 import {FlexAlign, FlexDirection, FlexJustify} from "SpectaclesUIKit.lspkg/Scripts/Components/Layout2D/Flex/FlexTypes"
 import {RoundedRectangle} from "SpectaclesUIKit.lspkg/Scripts/Visuals/RoundedRectangle/RoundedRectangle"
-import {Interactor, InteractorTriggerType} from "SpectaclesInteractionKit.lspkg/Core/Interactor/Interactor"
+import {Interactor, InteractorTriggerType, TargetingMode} from "SpectaclesInteractionKit.lspkg/Core/Interactor/Interactor"
 
 type RouteState = "travel" | "near" | "open"
 
@@ -74,6 +74,8 @@ function makeButton(node: SceneObject, width: number, height: number, name: stri
     button.setVariant({theme: "SnapOS3", shape: "Rectangle", style: "Secondary"})
     button.size = new vec3(width, height, 0.4)
     button.initialize()
+    // A fingertip can cross the button when aiming a pinch at close range.
+    button.interactable.targetingMode = TargetingMode.Direct | TargetingMode.Indirect
     label(node, name, caption, 0, 0, width - 0.6, height - 0.3, 75, ivory, true)
     return button
 }

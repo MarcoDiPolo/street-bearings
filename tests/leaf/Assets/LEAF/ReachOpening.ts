@@ -10,14 +10,14 @@ import {displayed, withVisitor} from "./BearingsFixture"
 export class ReachOpening extends Scenario {
     async run(): Promise<void> {
         await withVisitor(async walkTo => {
-            await walkTo(-280)
+            await walkTo(-345)
             const targets = findInteractablesByName("OpenTarget", undefined, true)
             expect(targets.length).toBe(1)
             // Exercise LEAF's arm solver locally, without loading an avatar.
             const visitor = new IKBodyInteractor()
             await visitor.ready
             const target = targets[0]
-            const hand = visitor.right
+            const hand = visitor.left
             const phase = (name: string) => (event: {interactor: {currentTrigger: number}}) =>
                 print("REIMS_IK " + name + " trigger=" + event.interactor.currentTrigger)
             target.onHoverEnter.add(phase("hoverEnter"))
@@ -26,8 +26,8 @@ export class ReachOpening extends Scenario {
             target.onTriggerEnd.add(phase("release"))
             target.onTriggerEndOutside.add(phase("outside"))
             print("REIMS_IK indirect=" + hand.isIndirect(target))
-            expect(hand.isIndirect(target)).toBe(true)
-            await visitor.trigger(target)
+            expect(hand.isIndirect(target)).toBe(false)
+            await visitor.trigger(target, "left")
             print("REIMS_IK diagnostics=" + DiagnosticRecorder.getInstance().getAll()
                 .map(entry => entry.diagnostic.message).join(", "))
             await sleep(200)

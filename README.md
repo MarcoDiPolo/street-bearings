@@ -13,7 +13,9 @@ Open `SPECS-Project.esproj` in Lens Studio 5.23.2 and use Interactive Preview fo
 3. Aim at **Fermer** and press the mouse button. Hold it briefly, then release. To read again, return to **Ouvrir** and make a fresh click.
 4. Open the card and walk away. Approach once more to check that the card starts closed.
 
-Five design-brief checks passed using simulated input in Lens Studio. An additional right-hand reach simulation failed to aim at the open control. Hardware comfort and hand targeting still need a trial with glasses. The normal scene includes its runtime packages. The optional LEAF scenarios and their scene are in a separate test folder. [Preview results and screenshots](devpost/preview-checks.md) · [Replay the scenarios](tests/leaf/README.md)
+All six final scenarios passed in Lens Studio. The first five cover the design brief. The sixth opened the card with a nearby simulated left hand. A separate run used Lens Studio’s native mouse input to open the card on release and close it on the next press. Comfort and hand tracking on physical glasses remain untested. [Watch the preview walkthrough](https://www.youtube.com/watch?v=mLS4WEyBpDo) · [Final test results](devpost/evidence/final-pinch-check.md) · [Native pointer check](devpost/evidence/native-pointer.md)
+
+The normal scene includes its runtime packages. The optional LEAF scenarios and their scene are in a separate test folder. The initial long-range right-hand attempt is preserved alongside the final checks. [Preview results and screenshots](devpost/preview-checks.md) · [Replay the scenarios](tests/leaf/README.md)
 
 ## The place
 

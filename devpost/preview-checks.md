@@ -1,5 +1,9 @@
 # Preview test results
 
+All six final checks passed on 25 November 2026. Direct and indirect targeting let the simulated left hand pinch the control at close range. The native preview mouse also opened and closed the card. [Final results and times](evidence/final-pinch-check.md) · [Native pointer check](evidence/native-pointer.md)
+
+## Initial run
+
 On 25 November 2026, the five acceptance scenarios from the approved design brief passed in Lens Studio 5.23.2 on Windows. The scene used the SPECS preview, Spectacles Interaction Kit 2.0.0, Spectacles UI Kit 2.0.0 and LEAF 2.0.2.
 
 | LEAF scenario | Observed in Preview |
@@ -12,4 +16,4 @@ On 25 November 2026, the five acceptance scenarios from the approved design brie
 
 LEAF moved the preview camera in steps and sent synthetic pinch, hold, release and target-loss events through the interaction kit. The run used LEAF editor plugin 5.23.0. It did not send keyboard events. The captures show the station sign and direction arrow, the open control at the arch, the history card on the right, and the open control again after closing the card. [Machine-readable run results](evidence/leaf-results.json) · [Station](evidence/station.png) · [Arrival](evidence/arrival.png) · [Card open](evidence/card-open.png) · [Card closed](evidence/card-closed.png)
 
-An additional simulated right-hand reach test, `reims-ik-reach`, failed. Its pointing ray could not converge on the open control. The five checks above establish the scene logic. Physical hand tracking and comfortable reach remain unverified. The station and arch have fixed positions in the model. Real street navigation and use in daylight have not been tested on glasses.
+In this initial run, the additional simulated right-hand reach test, `reims-ik-reach`, failed. Its pointing ray could not converge on the open control. The later test used a closer starting point and the simulated left hand. Physical hand tracking and comfortable reach remain unverified. The station and arch have fixed positions in the model. Real street navigation and use in daylight have not been tested on glasses.
