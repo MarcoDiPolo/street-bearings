@@ -1,0 +1,14 @@
+/Cache/
+/Support/
+/Workspaces/
+/PluginsUserPreferences/
+/.agents/
+/.claude/
+/.codex/
+/.cursor/
+/.vscode/
+/.mcp.json
+*.esproj.*.lock
+*.log
+.DS_Store
+Thumbs.db

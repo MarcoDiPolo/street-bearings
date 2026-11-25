@@ -1,0 +1,5 @@
+# Preserve Lens Studio manifests, source asset IDs and the original brief byte for byte.
+* -text
+*.png binary
+*.hdr binary
+*.lspkg binary

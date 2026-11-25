@@ -1,0 +1,92 @@
+{
+  "project": "Street Bearings",
+  "editor": "Lens Studio 5.23.2.26081320",
+  "leafPackage": "2.0.2",
+  "leafPlugin": "5.23.0",
+  "interactionKit": "2.0.0",
+  "uiKit": "2.0.0",
+  "execution": "run_leaf_scenario",
+  "onDevice": false,
+  "sceneLog": "LensStudioLog-2026-11-25-07-15-16-138-1ce31.txt",
+  "locomotion": "Camera advanced along the street through incremented head poses. LEAF did not inject keyboard events.",
+  "functionalInput": "LEAF DefaultLeafInteractor supplied SIK targeted pinch, hold, release, and target loss.",
+  "screenProjections": {
+    "OpenTarget": {
+      "x": 0.35752177238464355,
+      "y": 0.7338793277740479
+    },
+    "CloseTarget": {
+      "x": 0.8795071840286255,
+      "y": 0.7076548337936401
+    }
+  },
+  "supplementalInput": "LEAF offline IKBodyInteractor right hand, indirect=true, fail-fast. Ray convergence failed before a pinch was delivered.",
+  "runs": [
+    {
+      "startedUTC": "2026-11-25T07:17:14.127Z",
+      "endedUTC": "2026-11-25T07:17:24.174Z",
+      "mcp": {
+        "scenarioId": "reims-departure",
+        "status": "succeeded",
+        "target": "preview"
+      },
+      "doneCriterion": 1,
+      "manager": "[Preview 1] [Packages/Leaf.lspkg/Utils/common/Logger.ts:89] I [DefaultLeafScenarioManager] [  2.599s]PASSED: reims-departure"
+    },
+    {
+      "startedUTC": "2026-11-25T07:17:40.874Z",
+      "endedUTC": "2026-11-25T07:17:53.203Z",
+      "mcp": {
+        "scenarioId": "reims-guards",
+        "status": "succeeded",
+        "target": "preview"
+      },
+      "doneCriterion": 2,
+      "manager": "[Preview 1] [Packages/Leaf.lspkg/Utils/common/Logger.ts:89] I [DefaultLeafScenarioManager] [  4.582s]PASSED: reims-guards"
+    },
+    {
+      "startedUTC": "2026-11-25T07:18:08.060Z",
+      "endedUTC": "2026-11-25T07:18:27.685Z",
+      "mcp": {
+        "scenarioId": "reims-history",
+        "status": "succeeded",
+        "target": "preview"
+      },
+      "doneCriterion": 3,
+      "manager": "[Preview 1] [Packages/Leaf.lspkg/Utils/common/Logger.ts:89] I [DefaultLeafScenarioManager] [ 13.274s]PASSED: reims-history"
+    },
+    {
+      "startedUTC": "2026-11-25T07:18:42.967Z",
+      "endedUTC": "2026-11-25T07:19:02.877Z",
+      "mcp": {
+        "scenarioId": "reims-close",
+        "status": "succeeded",
+        "target": "preview"
+      },
+      "doneCriterion": 4,
+      "manager": "[Preview 1] [Packages/Leaf.lspkg/Utils/common/Logger.ts:89] I [DefaultLeafScenarioManager] [ 15.214s]PASSED: reims-close"
+    },
+    {
+      "startedUTC": "2026-11-25T07:19:07.259Z",
+      "endedUTC": "2026-11-25T07:19:24.873Z",
+      "mcp": {
+        "scenarioId": "reims-return",
+        "status": "succeeded",
+        "target": "preview"
+      },
+      "doneCriterion": 5,
+      "manager": "[Preview 1] [Packages/Leaf.lspkg/Utils/common/Logger.ts:89] I [DefaultLeafScenarioManager] [  4.320s]PASSED: reims-return"
+    },
+    {
+      "startedUTC": "2026-11-25T07:19:30.517Z",
+      "endedUTC": "2026-11-25T07:19:51.874Z",
+      "mcp": {
+        "scenarioId": "reims-ik-reach",
+        "status": "failed",
+        "target": "preview"
+      },
+      "doneCriterion": null,
+      "manager": "[Preview 1] [Packages/Leaf.lspkg/Utils/common/Logger.ts:89] E [DefaultLeafScenarioManager] [  8.177s]FAILED: reims-ik-reach - Error: [IK right] ray failed to converge on \"OpenTarget\""
+    }
+  ]
+}
